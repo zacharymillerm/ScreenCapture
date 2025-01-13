@@ -1,0 +1,43 @@
+E:\WorkSpace\Tech\EmployeeApp\bin\Debug\net471\EmployeeApp.exe.config
+E:\WorkSpace\Tech\EmployeeApp\bin\Debug\net471\EmployeeApp.exe
+E:\WorkSpace\Tech\EmployeeApp\bin\Debug\net471\EmployeeApp.pdb
+E:\WorkSpace\Tech\EmployeeApp\bin\Debug\net471\Hardcodet.Wpf.TaskbarNotification.dll
+E:\WorkSpace\Tech\EmployeeApp\obj\Debug\net471\EmployeeApp.csproj.AssemblyReference.cache
+E:\WorkSpace\Tech\EmployeeApp\obj\Debug\net471\EmployeeApp.csproj.SuggestedBindingRedirects.cache
+E:\WorkSpace\Tech\EmployeeApp\obj\Debug\net471\Views\MainWindow.g.cs
+E:\WorkSpace\Tech\EmployeeApp\obj\Debug\net471\App.g.cs
+E:\WorkSpace\Tech\EmployeeApp\obj\Debug\net471\GeneratedInternalTypeHelper.g.cs
+E:\WorkSpace\Tech\EmployeeApp\obj\Debug\net471\EmployeeApp_MarkupCompile.cache
+E:\WorkSpace\Tech\EmployeeApp\obj\Debug\net471\EmployeeApp_MarkupCompile.lref
+E:\WorkSpace\Tech\EmployeeApp\obj\Debug\net471\Views\MainWindow.baml
+E:\WorkSpace\Tech\EmployeeApp\obj\Debug\net471\EmployeeApp.g.resources
+E:\WorkSpace\Tech\EmployeeApp\obj\Debug\net471\EmployeeApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\WorkSpace\Tech\EmployeeApp\obj\Debug\net471\EmployeeApp.AssemblyInfoInputs.cache
+E:\WorkSpace\Tech\EmployeeApp\obj\Debug\net471\EmployeeApp.AssemblyInfo.cs
+E:\WorkSpace\Tech\EmployeeApp\obj\Debug\net471\EmployeeApp.csproj.CoreCompileInputs.cache
+E:\WorkSpace\Tech\EmployeeApp\obj\Debug\net471\EmployeeApp.csproj.CopyComplete
+E:\WorkSpace\Tech\EmployeeApp\obj\Debug\net471\EmployeeApp.exe
+E:\WorkSpace\Tech\EmployeeApp\obj\Debug\net471\EmployeeApp.pdb
+E:\WorkSpace\Tech\EmployeeApp\bin\Debug\net471\Assets\app.ico
+E:\WorkSpace\Tech\EmployeeApp\obj\Debug\net471\EmployeeApp_Content.g.cs
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\bin\Debug\net471\EmployeeApp.exe.config
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\bin\Debug\net471\EmployeeApp.exe
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\bin\Debug\net471\EmployeeApp.pdb
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\bin\Debug\net471\Hardcodet.Wpf.TaskbarNotification.dll
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\obj\Debug\net471\EmployeeApp.csproj.AssemblyReference.cache
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\obj\Debug\net471\EmployeeApp.csproj.SuggestedBindingRedirects.cache
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\obj\Debug\net471\Views\MainWindow.g.cs
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\obj\Debug\net471\App.g.cs
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\obj\Debug\net471\GeneratedInternalTypeHelper.g.cs
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\obj\Debug\net471\EmployeeApp_MarkupCompile.cache
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\obj\Debug\net471\EmployeeApp_MarkupCompile.lref
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\obj\Debug\net471\Views\MainWindow.baml
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\obj\Debug\net471\EmployeeApp.g.resources
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\obj\Debug\net471\EmployeeApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\obj\Debug\net471\EmployeeApp.AssemblyInfoInputs.cache
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\obj\Debug\net471\EmployeeApp.AssemblyInfo.cs
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\obj\Debug\net471\EmployeeApp.csproj.CoreCompileInputs.cache
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\obj\Debug\net471\EmployeeApp.csproj.CopyComplete
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\obj\Debug\net471\EmployeeApp.exe
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\obj\Debug\net471\EmployeeApp.pdb
+E:\WorkSpace\Tech\Screen Capture\EmployeeApp\obj\Debug\net471\EmployeeApp_Content.g.cs

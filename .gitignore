@@ -1,0 +1,8 @@
+EmployeeApp/bin
+
+MonitoringServer/backend/node_modules/
+MonitoringServer/backend/uploads/
+MonitoringServer/backend/package-lock.json
+
+MonitoringServer/frontend/node_modules/
+MonitoringServer/frontend/package-lock.json
