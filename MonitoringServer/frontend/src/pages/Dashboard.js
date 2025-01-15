@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { fetchAllEmployeesWithLastScreenshot } from "../api/api";
 import { useNavigate } from "react-router-dom";
+import config from "../config";
 
 function getTimeDifferenceAndColor(timestamp) {
   const now = new Date();
@@ -103,7 +104,7 @@ const Dashboard = () => {
               </div>
               {employee.latestScreenshot ? (
                 <img
-                  src={`http://localhost:3337${employee.latestScreenshot.url}`}
+                  src={`${config.SERVER_URL}${employee.latestScreenshot.url}`}
                   alt="Latest Screenshot"
                   className="mt-2 rounded h-48"
                 />

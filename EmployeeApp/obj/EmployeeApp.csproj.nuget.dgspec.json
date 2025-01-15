@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\WorkSpace\\Tech\\Screen Capture\\employeescreencapture\\EmployeeApp\\EmployeeApp.csproj": {}
+    "E:\\WorkSpace\\Tech\\Screen Capture\\ScreenCapture\\EmployeeApp\\EmployeeApp.csproj": {}
   },
   "projects": {
-    "E:\\WorkSpace\\Tech\\Screen Capture\\employeescreencapture\\EmployeeApp\\EmployeeApp.csproj": {
+    "E:\\WorkSpace\\Tech\\Screen Capture\\ScreenCapture\\EmployeeApp\\EmployeeApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\WorkSpace\\Tech\\Screen Capture\\employeescreencapture\\EmployeeApp\\EmployeeApp.csproj",
+        "projectUniqueName": "E:\\WorkSpace\\Tech\\Screen Capture\\ScreenCapture\\EmployeeApp\\EmployeeApp.csproj",
         "projectName": "EmployeeApp",
-        "projectPath": "E:\\WorkSpace\\Tech\\Screen Capture\\employeescreencapture\\EmployeeApp\\EmployeeApp.csproj",
+        "projectPath": "E:\\WorkSpace\\Tech\\Screen Capture\\ScreenCapture\\EmployeeApp\\EmployeeApp.csproj",
         "packagesPath": "C:\\Users\\Souleye\\.nuget\\packages\\",
-        "outputPath": "E:\\WorkSpace\\Tech\\Screen Capture\\employeescreencapture\\EmployeeApp\\obj\\",
+        "outputPath": "E:\\WorkSpace\\Tech\\Screen Capture\\ScreenCapture\\EmployeeApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

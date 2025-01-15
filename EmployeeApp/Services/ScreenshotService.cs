@@ -42,11 +42,12 @@ namespace EmployeeApp.Services
 				}
 
 				// Compress and save the image
-				SaveCompressedImage(bitmap, filePath, 25); // 25 is the quality level
+				SaveCompressedImage(bitmap, filePath, 30);
 			}
 
 			return filePath;
 
+			// Method to save compressed image with resizing
 			// Method to save compressed image
 			void SaveCompressedImage(Bitmap bitmap, string path, long quality)
 			{

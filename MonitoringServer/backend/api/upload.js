@@ -4,11 +4,6 @@ const sharp = require("sharp");
 const path = require("path");
 const fs = require("fs");
 
-let pixelmatch;
-(async () => {
-  pixelmatch = (await import("pixelmatch")).default;
-})();
-
 const router = express.Router();
 
 // Multer storage configuration
@@ -73,17 +68,19 @@ async function areImagesIdentical(image1Path, image2Path) {
     ]);
 
     // Create sharp instances from buffers
-    const img1 = sharp(file1Buffer);
-    const img2 = sharp(file2Buffer);
+    const [img1, img2] = [sharp(file1Buffer), sharp(file2Buffer)];
 
+    // Get metadata for both images
     const [img1Metadata, img2Metadata] = await Promise.all([
       img1.metadata(),
       img2.metadata(),
     ]);
 
+    // Crop heights by removing the bottom 60 pixels
     const cropHeight1 = img1Metadata.height - 60;
     const cropHeight2 = img2Metadata.height - 60;
 
+    // Check if dimensions mismatch
     if (
       img1Metadata.width !== img2Metadata.width ||
       cropHeight1 !== cropHeight2
@@ -91,8 +88,8 @@ async function areImagesIdentical(image1Path, image2Path) {
       return false;
     }
 
-    // Extract raw buffers for each image for pixel comparison
-    const [img1Cropped, img2Cropped] = await Promise.all([
+    // Resize both images to the cropped dimensions for comparison
+    const [img1CroppedBuffer, img2CroppedBuffer] = await Promise.all([
       img1
         .extract({
           left: 0,
@@ -100,7 +97,6 @@ async function areImagesIdentical(image1Path, image2Path) {
           width: img1Metadata.width,
           height: cropHeight1,
         })
-        .ensureAlpha()
         .raw()
         .toBuffer(),
       img2
@@ -110,21 +106,23 @@ async function areImagesIdentical(image1Path, image2Path) {
           width: img2Metadata.width,
           height: cropHeight2,
         })
-        .ensureAlpha()
         .raw()
         .toBuffer(),
     ]);
 
-    const diff = pixelmatch(
-      img1Cropped,
-      img2Cropped,
-      null,
-      img1Metadata.width,
-      cropHeight1,
-      { threshold: 0.1 }
-    );
+    // Compare the cropped buffers in chunks for better performance
+    const chunkSize = 1024; // Compare 1024 bytes at a time
+    for (let i = 0; i < img1CroppedBuffer.length; i += chunkSize) {
+      const chunk1 = img1CroppedBuffer.slice(i, i + chunkSize);
+      const chunk2 = img2CroppedBuffer.slice(i, i + chunkSize);
 
-    return diff === 0;
+      if (!chunk1.equals(chunk2)) {
+        return false; // Return immediately on mismatch
+      }
+    }
+
+    // If all chunks match, the images are identical
+    return true;
   } catch (error) {
     console.error("Error comparing images:", error);
     return false;
@@ -167,12 +165,17 @@ router.post("/", upload.single("screenshot"), async (req, res) => {
           await fs.promises.chmod(existingFilePath, 0o666);
           // Then delete
           await fs.promises.unlink(existingFilePath);
-          console.log("File deleted successfully by identical check: ", existingFilePath);
+          console.log(
+            "File deleted successfully by identical check: ",
+            existingFilePath
+          );
         } catch (err) {
           console.error("Error deleting file:", err);
         }
       }
     }
+
+    console.log("File uploaded successfully: ", currentFilePath);
 
     res.status(200).send({
       message: "File uploaded successfully",
