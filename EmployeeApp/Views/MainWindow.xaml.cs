@@ -7,6 +7,7 @@ using System;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
+using Microsoft.Win32;
 
 namespace EmployeeApp.Views
 {
@@ -21,6 +22,8 @@ namespace EmployeeApp.Views
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			SystemEvents.SessionSwitch += OnSessionSwitch;
 
 			// Load existing config or set default
 			config = ConfigManager.LoadConfig();
@@ -127,6 +130,39 @@ namespace EmployeeApp.Views
 			{
 				// Log the exception or handle it appropriately
 				Console.WriteLine($"Error during CaptureAndSyncAsync: {ex.Message}");
+			}
+		}
+
+		private void OnSessionSwitch(object sender, SessionSwitchEventArgs e)
+		{
+			switch (e.Reason)
+			{
+				case SessionSwitchReason.SessionLock:
+				case SessionSwitchReason.SessionLogoff:
+					PauseCapture();
+					break;
+				case SessionSwitchReason.SessionUnlock:
+				case SessionSwitchReason.SessionLogon:
+					ResumeCapture();
+					break;
+			}
+		}
+
+		private void PauseCapture()
+		{
+			if (timer != null && timer.IsEnabled)
+			{
+				timer.Stop();
+				Console.WriteLine("Capture paused due to session change.");
+			}
+		}
+
+		private void ResumeCapture()
+		{
+			if (timer != null && !timer.IsEnabled)
+			{
+				timer.Start();
+				Console.WriteLine("Capture resumed due to session change.");
 			}
 		}
 
