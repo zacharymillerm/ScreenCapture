@@ -54,7 +54,7 @@ const Modal = ({ imageSrc, title, onClose, onPrev, onNext }) => {
         <img
           src={imageSrc}
           alt="Screenshot"
-          className="transition-all w-auto h-auto max-w-none max-h-[90vh]"
+          className="transition-all w-auto h-[90vh] max-w-none"
         />
       </div>
     </div>

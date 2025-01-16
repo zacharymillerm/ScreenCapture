@@ -34,22 +34,15 @@ namespace EmployeeApp.Services
 			string directory = saveDirectory ?? screenshotsFolder;
 			string filePath = Path.Combine(directory, $"{DateTime.UtcNow:yyyy-MM-dd_HH-mm-ss}.jpg"); // Save in the specified folder
 
-			using (Bitmap originalBitmap = new Bitmap(bounds.Width, bounds.Height))
+			using (Bitmap bitmap = new Bitmap(bounds.Width, bounds.Height))
 			{
-				using (Graphics g = Graphics.FromImage(originalBitmap))
+				using (Graphics g = Graphics.FromImage(bitmap))
 				{
 					g.CopyFromScreen(bounds.Location, Point.Empty, bounds.Size);
 				}
 
-				// Resize the image to half its original size
-				int newWidth = originalBitmap.Width / 2;
-				int newHeight = originalBitmap.Height / 2;
-
-				using (Bitmap resizedBitmap = new Bitmap(originalBitmap, new Size(newWidth, newHeight)))
-				{
-					// Compress and save the resized image
-					SaveCompressedImage(resizedBitmap, filePath, 60);
-				}
+				// Compress and save the resized image
+				SaveCompressedImage(bitmap, filePath, 30);
 			}
 
 			return filePath;
