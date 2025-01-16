@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "KEDOzWmH4OwGcb4MK2R0+VG3wOGIlGG1gNx4c2YAhMqsDkEEBwnHVLfouXzd6IYi+7a2ha1RzReHzesrDN2s0w==",
+  "success": true,
+  "projectFilePath": "E:\\WorkSpace\\Tech\\Screen Capture\\ScreenCapture\\DuplicateImageRemover\\DuplicateImageRemover.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Souleye\\.nuget\\packages\\ookii.dialogs.wpf\\5.0.1\\ookii.dialogs.wpf.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

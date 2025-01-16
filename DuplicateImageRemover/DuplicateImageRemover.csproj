@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="13955911.png" />
+    <None Remove="app.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="app.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="app.png" />
+  </ItemGroup>
+
+</Project>

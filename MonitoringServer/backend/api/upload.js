@@ -97,6 +97,7 @@ async function areImagesIdentical(image1Path, image2Path) {
           width: img1Metadata.width,
           height: cropHeight1,
         })
+        .resize(64, 64)
         .raw()
         .toBuffer(),
       img2
@@ -106,12 +107,13 @@ async function areImagesIdentical(image1Path, image2Path) {
           width: img2Metadata.width,
           height: cropHeight2,
         })
+        .resize(64, 64)
         .raw()
         .toBuffer(),
     ]);
 
     // Compare the cropped buffers in chunks for better performance
-    const chunkSize = 1024; // Compare 1024 bytes at a time
+    const chunkSize = 128; // Compare 1024 bytes at a time
     for (let i = 0; i < img1CroppedBuffer.length; i += chunkSize) {
       const chunk1 = img1CroppedBuffer.slice(i, i + chunkSize);
       const chunk2 = img2CroppedBuffer.slice(i, i + chunkSize);
